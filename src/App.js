@@ -1,3 +1,5 @@
+import { Contact } from './components/Contact';
+import { Main } from './components/Main';
 import logo from './logo.png';
 import './App.css';
 import * as React from 'react';
@@ -146,15 +148,24 @@ function App() {
         </StyledTabs>
         <div className="App-header">
           <TabPanel value={value} index={0} dir={theme.direction}>
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="header">CurtainOS</h1>
-            <p className="text">a free and open source operating system, built from scratch.</p>
+            <Main logo={logo} />
           </TabPanel>
           <TabPanel value={value} index={1} dir={theme.direction}>
-            Item Two
+            Not implemented yet
           </TabPanel>
           <TabPanel value={value} index={2} dir={theme.direction}>
-            Item Three
+            <Contact/>
+            <script> window.intergramId = "-1001505849269" </script>
+            <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+          </TabPanel>
+          <TabPanel value={value} index={3} dir={theme.direction}>
+            <div>
+              <h1>The idea</h1>
+              <h3>CurtainOS - Build it YOUR way.</h3>
+              <p>Not a Linux distro, not an own OS, CurtainOS can be anything the user wants.</p>
+              <p>Don't like a bootloader? Use a different one.</p>
+              <p>Want to see your tools included in the ISO? Contact us!</p>
+            </div>
           </TabPanel>
         </div>
         <Box sx={{ p: 3 }} />
